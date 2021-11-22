@@ -1,0 +1,8 @@
+#pycairo==1.20.1
+#PyGObject==3.42.*
+#git+https://github.com/jashandeep-sohi/webcam-filters.git
+pynput==1.7.5
+pygame==2.1.*
+deepface==0.*
+cvzone==1.5.*
+pyfakewebcam==0.1.*

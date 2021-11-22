@@ -1,0 +1,24 @@
+- python
+python3-pip python3-gi python-gi-dev python-gobject-2-dev python3.7 python3.7-dev python3-opencv
+
+- v4l2loopback
+v4l2loopback-dkms v4l2loopback-utils
+
+- gstreamer
+libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+
+- python gst
+libcairo2 libcairo2-dev libgirepository1.0-dev python3-gst-1.0
+
+- build of gst-python (git config --global http.sslverify false)
+git clone https://github.com/GStreamer/gst-python.git
+cd gst-python
+
+export PYTHON=/usr/bin/python3
+git checkout 1.14.5  (gst-launch-1.0 --gst-version)
+
+./autogen.sh --disable-gtk-doc --noconfigure
+./configure --with-libpython-dir=/usr/lib/x86_64-linux-gnu --prefix venv  (run using the desired python version)
+
+make
+make install

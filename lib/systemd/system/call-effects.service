@@ -1,0 +1,12 @@
+[Unit]
+Description=Creates a virtual camera and microphone for Call Effects app
+
+[Service]
+Type=simple
+User=root
+ExecStart=/etc/call-effects/start.sh
+ExecStop=/etc/call-effects/stop.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
